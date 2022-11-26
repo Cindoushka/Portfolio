@@ -1,0 +1,31 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+header {
+    font-family: 'Nanum Gothic';
+    background-color: $lightblack;
+    color: $lightpurple;
+    font-size: 11px;
+    padding: 10px;
+    border-bottom: 1px $darkpurple solid;
+        a {
+            color: $lightpurple;
+            text-decoration: none;
+        }
+}
+
+#contenuheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        .headercenter {
+            font-size: 10px;
+            font-style: oblique;
+        }
+}
+
+#contenunav {
+    display:flex;
+    gap: 20px;
+}

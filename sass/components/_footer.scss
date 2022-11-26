@@ -1,0 +1,34 @@
+footer {
+    font-family: 'Nanum Gothic';
+    background-color: $lightblack;
+    color: $lightpurple;
+    font-size: 11px;
+    padding: 10px;
+    // border-top: 1px $darkpurple solid;
+        a {
+            color: $lightpurple;
+            text-decoration: none;
+        }
+}
+
+#contenufooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        .fleche {
+            border: 1px $lightpurple solid;
+            padding: 1px 10px 1px 10px;
+            border-radius: 16px;
+            margin-left: 4px;
+            font-size: 12px;
+        }
+}
+
+#navfooter {
+    display:flex;
+    gap: 20px;
+}
+
+a:hover {
+    font-weight: bold;
+}

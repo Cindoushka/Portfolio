@@ -1,3 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap");
+html {
+  scroll-behavior: smooth;
+}
 
+header {
+  font-family: "Nanum Gothic";
+  background-color: #1b1b1b;
+  color: #DDC8DF;
+  font-size: 11px;
+  padding: 10px;
+  border-bottom: 1px #3F2F40 solid;
+}
+header a {
+  color: #DDC8DF;
+  text-decoration: none;
+}
+
+#contenuheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#contenuheader .headercenter {
+  font-size: 10px;
+  font-style: oblique;
+}
+
+#contenunav {
+  display: flex;
+  gap: 20px;
+}
+
+footer {
+  font-family: "Nanum Gothic";
+  background-color: #1b1b1b;
+  color: #DDC8DF;
+  font-size: 11px;
+  padding: 10px;
+}
+footer a {
+  color: #DDC8DF;
+  text-decoration: none;
+}
+
+#contenufooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#contenufooter .fleche {
+  border: 1px #DDC8DF solid;
+  padding: 1px 10px 1px 10px;
+  border-radius: 16px;
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+#navfooter {
+  display: flex;
+  gap: 20px;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+body {
+  background: linear-gradient(to bottom, rgb(37, 37, 37), rgb(27, 27, 27));
+  font-family: "Roboto";
+  font-weight: 300;
+  color: whitesmoke;
+}
+
+#contenuaccueil {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 40px;
+}
+#contenuaccueil p {
+  background-image: linear-gradient(45deg, #3F2F40, #DDC8DF, #3F2F40);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.grandtitre {
+  font-family: "Rubik";
+  font-size: 65px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: -60px;
+  font-weight: 600;
+  background-image: linear-gradient(45deg, #3F2F40, #DDC8DF, #3F2F40);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.grandtitreconteneur {
+  font-family: "Rubik";
+  font-size: 65px;
+  font-weight: 600;
+  margin-bottom: -30px;
+}
+
+.demititre {
+  font-size: 40px;
+  font-family: "Rubik";
+  margin-left: 50px;
+}
+
+.soustitre {
+  font-family: "Rubik";
+  font-size: 16px;
+  margin-left: 100px;
+  text-align: center;
+  font-style: oblique;
+}
+
+img {
+  transform: rotate(-8deg);
+  width: 200px;
+  margin: 90px -20px 30px 90px;
+  border: 5px white solid;
+  box-shadow: 3px 3px 8px black;
+}
+
+.premier {
+  flex: 1;
+}
+
+.deuxieme {
+  flex: 3;
+}
 
 /*# sourceMappingURL=style.css.map */
