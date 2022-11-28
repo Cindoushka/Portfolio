@@ -1,12 +1,11 @@
 footer {
     font-family: 'Nanum Gothic';
-    background-color: $lightblack;
-    color: $lightpurple;
-    font-size: 11px;
-    padding: 10px;
-    // border-top: 1px $darkpurple solid;
+    background-color: $mylavender;
+    color: black;
+    font-size: 10px;
+    padding: 0px 10px 0px 10px;
         a {
-            color: $lightpurple;
+            color: black; 
             text-decoration: none;
         }
 }
@@ -16,7 +15,7 @@ footer {
     justify-content: space-between;
     align-items: center;
         .fleche {
-            border: 1px $lightpurple solid;
+            border: 1px black solid;
             padding: 1px 10px 1px 10px;
             border-radius: 16px;
             margin-left: 4px;

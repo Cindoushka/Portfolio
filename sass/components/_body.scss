@@ -1,10 +1,7 @@
 body {
-    background: linear-gradient(
-        to bottom,
-        rgba(37, 37, 37),
-        rgba(27, 27, 27));
-    // background-color: $lightblack;
-    font-family: 'Roboto';
+    background: $mylavender;
+    font-family: 'Amiri';
     font-weight: 300;
-    color: whitesmoke
+    color: black;
+    overflow: scroll;
 }

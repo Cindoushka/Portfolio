@@ -1,23 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Amiri&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
 html {
   scroll-behavior: smooth;
 }
 
 header {
   font-family: "Nanum Gothic";
-  background-color: #1b1b1b;
-  color: #DDC8DF;
-  font-size: 11px;
+  background-color: #ede4ff;
+  font-size: 10px;
   padding: 10px;
-  border-bottom: 1px #3F2F40 solid;
+  color: black;
 }
 header a {
-  color: #DDC8DF;
+  color: black;
   text-decoration: none;
+}
+header img {
+  width: 30px;
+  float: left;
+  margin: 0px 10px 0px 0px;
 }
 
 #contenuheader {
@@ -25,9 +28,10 @@ header a {
   justify-content: space-between;
   align-items: center;
 }
-#contenuheader .headercenter {
-  font-size: 10px;
-  font-style: oblique;
+#contenuheader .lieu {
+  margin: 5px 0px 0px 20px;
+  padding: 0px 0px 0px 30px;
+  color: gray;
 }
 
 #contenunav {
@@ -37,13 +41,13 @@ header a {
 
 footer {
   font-family: "Nanum Gothic";
-  background-color: #1b1b1b;
-  color: #DDC8DF;
-  font-size: 11px;
-  padding: 10px;
+  background-color: #ede4ff;
+  color: black;
+  font-size: 10px;
+  padding: 0px 10px 0px 10px;
 }
 footer a {
-  color: #DDC8DF;
+  color: black;
   text-decoration: none;
 }
 
@@ -53,7 +57,7 @@ footer a {
   align-items: center;
 }
 #contenufooter .fleche {
-  border: 1px #DDC8DF solid;
+  border: 1px black solid;
   padding: 1px 10px 1px 10px;
   border-radius: 16px;
   margin-left: 4px;
@@ -70,74 +74,98 @@ a:hover {
 }
 
 body {
-  background: linear-gradient(to bottom, rgb(37, 37, 37), rgb(27, 27, 27));
-  font-family: "Roboto";
+  background: #ede4ff;
+  font-family: "Amiri";
   font-weight: 300;
-  color: whitesmoke;
+  color: black;
+  overflow: scroll;
 }
 
-#contenuaccueil {
+#entete {
   display: flex;
-  gap: 80px;
-  margin-bottom: 40px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10% auto 12% auto;
 }
-#contenuaccueil p {
-  background-image: linear-gradient(45deg, #3F2F40, #DDC8DF, #3F2F40);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+#entete h1 {
+  font-family: "Italiana";
+  font-size: 120px;
 }
-
-.grandtitre {
-  font-family: "Rubik";
-  font-size: 65px;
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: -60px;
-  font-weight: 600;
-  background-image: linear-gradient(45deg, #3F2F40, #DDC8DF, #3F2F40);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+#entete p {
+  font-family: "Amiri";
+  font-size: 14px;
+  width: 480px;
+  margin-top: -76px;
+  text-align: justify;
 }
 
-.grandtitreconteneur {
-  font-family: "Rubik";
-  font-size: 65px;
-  font-weight: 600;
-  margin-bottom: -30px;
+#portfolio {
+  background-color: white;
+  margin-left: 10px;
+  margin-right: 50px;
+  padding-bottom: 10px;
+}
+#portfolio .titreportfolio {
+  font-family: "Italiana";
+  font-size: 50px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+#portfolio .line {
+  border-top: 1px black solid;
+  width: 350px;
+  margin-left: 73px;
 }
 
-.demititre {
-  font-size: 40px;
-  font-family: "Rubik";
-  margin-left: 50px;
+#contenuportfolio {
+  background-color: white;
+  margin-left: 10px;
+  margin-right: 50px;
+}
+#contenuportfolio img {
+  width: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 2px 2px 8px black;
+  margin: 40px 0px 10px 40px;
 }
 
-.soustitre {
-  font-family: "Rubik";
-  font-size: 16px;
-  margin-left: 100px;
-  text-align: center;
-  font-style: oblique;
+#portfolio2 {
+  background-color: white;
+  margin-left: 10px;
+  margin-right: 50px;
+  padding-bottom: 40px;
+  text-align: end;
+  padding-top: 10px;
+}
+#portfolio2 .titreportfolio2 {
+  font-family: "Italiana";
+  font-size: 50px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
+#portfolio2 .line {
+  border-top: 1px black solid;
+  width: 350px;
+  margin-left: 68%;
 }
 
-img {
-  transform: rotate(-8deg);
+#listeappli {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  gap: 20px;
+  background-color: white;
+  margin-left: 10px;
+  margin-right: 50px;
+  padding: 50px;
+  margin-top: -10px;
+  list-style-type: none;
+}
+#listeappli img {
   width: 200px;
-  margin: 90px -20px 30px 90px;
-  border: 5px white solid;
-  box-shadow: 3px 3px 8px black;
-}
-
-.premier {
-  flex: 1;
-}
-
-.deuxieme {
-  flex: 3;
+  border-radius: 16px;
+  box-shadow: 2px 2px 8px black;
 }/*# sourceMappingURL=main.css.map */
