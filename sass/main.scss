@@ -1,15 +1,30 @@
-// BASE
+// VENDORS
 
-@import "base/colors";
-@import "base/fonts";
+@import "vendors/normalize.css";
 
-// COMPONENTS
+// BASE 
 
-@import "components/header";
-@import "components/footer";
-@import "components/body";
+@import "base/base";
+
+// UTILS
+
+@import "utils/colors";
+@import "utils/fonts";
+@import "utils/animation";
+
+// COMPONENTS 
+
+@import "components/logo";
+
+// LAYOUT
+
+@import "layout/body";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/section";
 
 // PAGES 
 
 @import "pages/index";
 @import "pages/portfolio";
+

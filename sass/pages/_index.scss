@@ -13,8 +13,61 @@
         p {
             font-family: 'Amiri';
             font-size: 14px;
-            width: 480px;
+            max-width: 480px;
             margin-top: -76px;
             text-align: justify;
         }
+}
+
+.navitem {
+    --nav-gap: 15px;
+    padding: var(--nav-gap);
+    position: fixed;
+    right: 0;
+    top:30%;
+    transform: translateY(50%);
+        .nav-item {
+            align-items: center;
+            display: flex;
+            margin-bottom: var(--nav-gap);
+            flex-direction: row-reverse;
+        }
+    }
+
+        .nav-label {
+            color: black;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0,1;
+        }
+
+        .nav-link:hover ~ nav-label {
+            opacity: 1;
+        }
+
+
+.nav-link {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    height: var(--nav-gap);
+    margin-left: var(--nav-gap);
+    transition: transform 0.1s;
+    width: var(--nav-gap);
+}
+
+.nav-link-selected {
+    background-color: black;
+    transform: scale(1.4);
+}
+
+@media all and (max-device-width: 480px) {
+    
+#contenuentete {
+    h1 {
+        font-size: 100px;
+    }
+    p {
+        width: 150px;
+    }
+}
 }

@@ -1,0 +1,10 @@
+.logoCB {
+        width: 30px;
+        float: left;
+        margin: 0px 10px 0px 0px;
+    }
+
+    .rotate-vert-center {
+        -webkit-animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    }

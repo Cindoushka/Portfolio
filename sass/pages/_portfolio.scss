@@ -3,6 +3,7 @@
     margin-left: 10px;
     margin-right: 50px;
     padding-bottom: 10px;
+    padding-top: 60px;
         .titreportfolio {
             font-family: 'Italiana';
             font-size: 50px;
@@ -68,3 +69,19 @@
             box-shadow: 2px 2px 8px black;
         }
 }
+
+
+@media all and (max-device-width: 480px) {
+    
+   #contenuportfolio {
+        img {
+        width: 150px;
+        }
+   }
+
+   #listeappli {
+        img {
+            width: 90px;
+        }
+   }
+    }

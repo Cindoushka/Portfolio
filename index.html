@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="sass/main.css">
     <title>CINDY BAJONI - Conceptrice développeuse d'applications DevOps en Alternance</title>
 </head>
 <body>
-    
+    <section id="home" class="home" data-label="Accueil">
     <header id="contenuheader">
         <div id="contenunom" class="metropole">
-            <img src="Images/cb3vector.svg" alt="logo CB" title="logo Cindy Bajoni">
-            <a href="index.html" alt="lien accueil" class="headerleft">CINDY BAJONI</a>
+            <img src="Images/cb3vector.svg" alt="logo CB" title="logo Cindy Bajoni" class="logoCB rotate-vert-center">
+            <a href="index.html" alt="lien accueil" class="headerleft ">CINDY BAJONI</a>
             <p class="lieu">Métropole Lilloise</p>
         </div>
 
@@ -25,7 +24,7 @@
     </header>
 
     <article id="entete">
-        <h1 class="titreentete">Cindy</h1>
+        <h1 class="titreentete tracking-in-contract">Cindy</h1>
         <p class="soustitreentete">RECHERCHE ALTERNANCE EN TANT QUE CONCEPTRICE DÉVELOPPEUSE D’APPLICATIONS ・ ENVIRONNEMENT DEVOPS ・AVRIL 2023 À AOÛT 2024</p>
     </article>
 
@@ -39,6 +38,75 @@
 
         <p class="footer2">CLIQUEZ POUR VOIR LA SUITE <a href="portfolio.html" class="fleche">→</a></p>
     </footer>
+</section>
 
+<section id="pageportfolio" class="pageportfolio" data-label="Portfolio">
+
+    <article id="portfolio">
+        <h2 class="titreportfolio">Mes projets web</h2>
+        <div class="line"></div>
+    </article>
+
+    <div id="contenuportfolio">
+        <img src="images/blog.png" alt="screen squedrong blog" title="Screen du Blog de Squedrong" class="leftportfolio">
+
+    </div>
+
+    <article id="portfolio2">
+        <h2 class="titreportfolio2">Mes projets iOS</h2>
+        <div class="line"></div>
+    </article>
+
+    <ul id="listeappli">
+        <li> <img src="images/wehobby.png" alt="Screen WeHobby" title="Screen WeHobby" class="appli1 rotate-vert-center"></li>
+        <li> <img src="images/instagram.png" alt="Screen Instagram" title="Screen Instagram" class="appli2 rotate-vert-center"></li>
+        <li> <img src="images/cv.png" alt="Screen CV" title="Screen CV" class="appli3 rotate-vert-center"></li>
+        <li> <img src="images/playeat.png" alt="Screen PlayEat!" title="Screen PlayEat!" class="appli4 rotate-vert-center"></li>
+
+
+    </ul>
+
+</section>
+
+    <nav class="navitem">
+        <!-- <div class="nav-item">
+            <a href="#home" class="nav-link nav-link-selected"></a>
+            <span class="nav-label">Accueil</span>
+        </div> 
+        <div class="nav-item">
+            <a href="#pageportfolio" class="nav-link nav-link-selected"></a>
+            <span class="nav-label">Portfolio</span>
+        </div> 
+        <div class="nav-item">
+            <a href="#about" class="nav-link nav-link-selected"></a>
+            <span class="nav-label">À propos</span>
+        </div> 
+
+        <div class="nav-item">
+            <a href="#contact" class="nav-link nav-link-selected"></a>
+            <span class="nav-label">Contact</span>
+        </div> 
+    </nav> -->
+
+    <script>
+        function activateNavigation() {
+            const sections= document.querySelectorAll(".section");
+            const navContainer= document.createElement("nav");
+            const navItems = Array.from(sections).map(sections => {
+                return `
+                    <div class="nav-item" data-for-section="${}">
+                        <a href="#contact" class="nav-link"></a>
+                        <span class="nav-label">Contacts</span>
+                        </div>
+                `;
+            });
+
+            console.log(sections);
+            console.log(navItems);
+
+        }
+
+        activationNagation();
+    </script>
 </body>
 </html>

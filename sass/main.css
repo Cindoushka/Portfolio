@@ -1,7 +1,78 @@
+@import "vendors/normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Amiri&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+* {
+  margin: 0px;
+}
+
+@-webkit-keyframes rotate-vert-center {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rotate-vert-center {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+.tracking-in-contract {
+  -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+.logoCB {
+  width: 30px;
+  float: left;
+  margin: 0px 10px 0px 0px;
+}
+
+.rotate-vert-center {
+  -webkit-animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+body {
+  background: #ede4ff;
+  font-family: "Amiri";
+  font-weight: 300;
+  color: black;
+  overflow: scroll;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -9,18 +80,21 @@ html {
 header {
   font-family: "Nanum Gothic";
   background-color: #ede4ff;
-  font-size: 10px;
+  font-size: 12px;
   padding: 10px;
   color: black;
+  position: fixed;
+  z-index: 1;
+  width: 98%;
+  right: 0;
+  top: 0;
 }
 header a {
   color: black;
   text-decoration: none;
 }
-header img {
-  width: 30px;
-  float: left;
-  margin: 0px 10px 0px 0px;
+header a:hover {
+  font-weight: bold;
 }
 
 #contenuheader {
@@ -39,16 +113,29 @@ header img {
   gap: 20px;
 }
 
+@media all and (max-device-width: 480px) {
+  nav {
+    flex-direction: column;
+  }
+}
 footer {
   font-family: "Nanum Gothic";
   background-color: #ede4ff;
   color: black;
-  font-size: 10px;
-  padding: 0px 10px 0px 10px;
+  font-size: 12px;
+  padding: 10px 10px 10px 10px;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 98%;
 }
 footer a {
   color: black;
   text-decoration: none;
+}
+footer a:hover {
+  font-weight: bold;
 }
 
 #contenufooter {
@@ -69,16 +156,8 @@ footer a {
   gap: 20px;
 }
 
-a:hover {
-  font-weight: bold;
-}
-
-body {
-  background: #ede4ff;
-  font-family: "Amiri";
-  font-weight: 300;
-  color: black;
-  overflow: scroll;
+section {
+  height: 100vh;
 }
 
 #entete {
@@ -95,16 +174,65 @@ body {
 #entete p {
   font-family: "Amiri";
   font-size: 14px;
-  width: 480px;
+  max-width: 480px;
   margin-top: -76px;
   text-align: justify;
 }
 
+.navitem {
+  --nav-gap: 15px;
+  padding: var(--nav-gap);
+  position: fixed;
+  right: 0;
+  top: 30%;
+  transform: translateY(50%);
+}
+.navitem .nav-item {
+  align-items: center;
+  display: flex;
+  margin-bottom: var(--nav-gap);
+  flex-direction: row-reverse;
+}
+
+.nav-label {
+  color: black;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0, 1;
+}
+
+.nav-link:hover ~ nav-label {
+  opacity: 1;
+}
+
+.nav-link {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  height: var(--nav-gap);
+  margin-left: var(--nav-gap);
+  transition: transform 0.1s;
+  width: var(--nav-gap);
+}
+
+.nav-link-selected {
+  background-color: black;
+  transform: scale(1.4);
+}
+
+@media all and (max-device-width: 480px) {
+  #contenuentete h1 {
+    font-size: 100px;
+  }
+  #contenuentete p {
+    width: 150px;
+  }
+}
 #portfolio {
   background-color: white;
   margin-left: 10px;
   margin-right: 50px;
   padding-bottom: 10px;
+  padding-top: 60px;
 }
 #portfolio .titreportfolio {
   font-family: "Italiana";
@@ -168,4 +296,13 @@ body {
   width: 200px;
   border-radius: 16px;
   box-shadow: 2px 2px 8px black;
+}
+
+@media all and (max-device-width: 480px) {
+  #contenuportfolio img {
+    width: 150px;
+  }
+  #listeappli img {
+    width: 90px;
+  }
 }/*# sourceMappingURL=main.css.map */
