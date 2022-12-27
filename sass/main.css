@@ -115,7 +115,10 @@ header a:hover {
 
 @media all and (max-device-width: 480px) {
   nav {
-    flex-direction: column;
+    margin-left: 20px;
+  }
+  nav .nav1, nav .nav2, nav .nav3 {
+    display: none;
   }
 }
 footer {
@@ -166,17 +169,21 @@ section {
   flex-wrap: wrap;
   align-items: center;
   margin: 10% auto 12% auto;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
 }
 #entete h1 {
   font-family: "Italiana";
-  font-size: 120px;
+  font-size: 100px;
+  text-align: center;
 }
 #entete p {
   font-family: "Amiri";
-  font-size: 14px;
-  max-width: 480px;
-  margin-top: -76px;
-  text-align: justify;
+  font-size: 16px;
+  max-width: 370px;
+  margin-top: -60px;
+  text-align: center;
 }
 
 .navitem {
@@ -221,7 +228,7 @@ section {
 
 @media all and (max-device-width: 480px) {
   #contenuentete h1 {
-    font-size: 100px;
+    font-size: 80px;
   }
   #contenuentete p {
     width: 150px;
@@ -229,27 +236,23 @@ section {
 }
 #portfolio {
   background-color: white;
-  margin-left: 10px;
-  margin-right: 50px;
   padding-bottom: 10px;
   padding-top: 60px;
 }
 #portfolio .titreportfolio {
   font-family: "Italiana";
   font-size: 50px;
-  margin-left: 10px;
+  margin-left: 30px;
   margin-bottom: 10px;
 }
 #portfolio .line {
   border-top: 1px black solid;
   width: 350px;
-  margin-left: 73px;
+  margin-left: 103px;
 }
 
 #contenuportfolio {
   background-color: white;
-  margin-left: 10px;
-  margin-right: 50px;
 }
 #contenuportfolio img {
   width: 450px;
@@ -262,11 +265,10 @@ section {
 
 #portfolio2 {
   background-color: white;
-  margin-left: 10px;
-  margin-right: 50px;
   padding-bottom: 40px;
   text-align: end;
   padding-top: 10px;
+  width: 100%;
 }
 #portfolio2 .titreportfolio2 {
   font-family: "Italiana";
@@ -286,8 +288,6 @@ section {
   flex-direction: row-reverse;
   gap: 20px;
   background-color: white;
-  margin-left: 10px;
-  margin-right: 50px;
   padding: 50px;
   margin-top: -10px;
   list-style-type: none;

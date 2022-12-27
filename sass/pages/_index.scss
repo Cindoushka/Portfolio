@@ -6,16 +6,20 @@
     // align-content: center;
     // height: 70vh;
     margin: 10% auto 12% auto;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
         h1 {
             font-family: 'Italiana';
-            font-size: 120px;
+            font-size: 100px;
+            text-align: center;
         }
         p {
             font-family: 'Amiri';
-            font-size: 14px;
-            max-width: 480px;
-            margin-top: -76px;
-            text-align: justify;
+            font-size: 16px;
+            max-width: 370px;
+            margin-top: -60px;
+            text-align: center;
         }
 }
 
@@ -64,10 +68,11 @@
     
 #contenuentete {
     h1 {
-        font-size: 100px;
+        font-size: 80px;
     }
     p {
         width: 150px;
     }
 }
+
 }

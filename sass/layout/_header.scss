@@ -39,8 +39,11 @@ header {
 }
 
 @media all and (max-device-width: 480px) {
-    nav {
-        flex-direction: column ;
-    }
 
+nav {
+    margin-left: 20px;
+         .nav1, .nav2, .nav3 {
+             display: none;
+        }
+    }
 }
