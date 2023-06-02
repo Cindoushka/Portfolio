@@ -1,0 +1,69 @@
+#aproposde {
+    background-color: $mylavender;
+    padding: 60px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: auto;
+    width: 90vw;
+    gap: 30px;
+    flex-wrap: wrap;
+    height: 90vh;
+    .maphoto {
+        width: 420px;
+        height: 420px;
+        object-fit: cover;
+        border-radius: 420px;
+        box-shadow: 2px 0px 8px black;
+        padding: 2px;
+        margin: 40px 20px 0px;
+
+    }
+    .titreportfolio {
+        font-family: 'Italiana';
+        font-size: 50px;
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+    .line {
+        border-top: 1px black solid;
+        width: 350px;
+        margin-left: 103px;
+        margin-bottom: 40px;
+    }
+    p {
+        width: 50vw;
+        font-size: 15px;
+        margin: 8px;
+        font-family: 'Nanum Gothic';
+    }
+    .debutabout{
+        background-color: white;
+        padding: 8px;
+        border-radius: 20px;
+    }
+    img {
+        gap: 20px;
+        height: 40px;
+        border-radius: 10px;
+        -webkit-filter: drop-shadow(2px 0px 6px black);
+        margin: 20px;
+    }
+    .logos {
+        margin: auto;
+        margin-top: -20px;
+    }
+}
+
+@media all and (max-device-width: 480px) {
+
+    #aproposde {
+        img {
+            width: 250px;
+            height: 250px;
+        }
+        p { 
+            font-size: 12px;
+        }
+    }
+
+}

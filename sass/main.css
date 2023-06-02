@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "vendors/normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Amiri&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
@@ -6,34 +7,12 @@
 * {
   margin: 0px;
 }
-
-@-webkit-keyframes rotate-vert-center {
-  0% {
-    transform: rotateY(0);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
-}
 @keyframes rotate-vert-center {
   0% {
     transform: rotateY(0);
   }
   100% {
     transform: rotateY(360deg);
-  }
-}
-@-webkit-keyframes tracking-in-contract {
-  0% {
-    letter-spacing: 1em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    letter-spacing: normal;
-    opacity: 1;
   }
 }
 @keyframes tracking-in-contract {
@@ -50,7 +29,6 @@
   }
 }
 .tracking-in-contract {
-  -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
   animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
@@ -58,10 +36,10 @@
   width: 30px;
   float: left;
   margin: 0px 10px 0px 0px;
+  padding-left: 10px;
 }
 
 .rotate-vert-center {
-  -webkit-animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
   animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
 
@@ -81,11 +59,11 @@ header {
   font-family: "Nanum Gothic";
   background-color: #ede4ff;
   font-size: 12px;
-  padding: 10px;
+  padding: 10px 10px 10px 20px;
   color: black;
   position: fixed;
   z-index: 1;
-  width: 98%;
+  width: 99%;
   right: 0;
   top: 0;
 }
@@ -94,6 +72,9 @@ header a {
   text-decoration: none;
 }
 header a:hover {
+  font-weight: bold;
+}
+header .nav1, header .nav2, header .nav3 ::target {
   font-weight: bold;
 }
 
@@ -131,7 +112,7 @@ footer {
   z-index: 1;
   bottom: 0;
   left: 0;
-  width: 98%;
+  width: 100%;
 }
 footer a {
   color: black;
@@ -168,7 +149,8 @@ section {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  margin: 10% auto 12% auto;
+  align-content: center;
+  margin: 14% auto 12% auto;
   width: 100%;
   position: fixed;
   z-index: -1;
@@ -181,9 +163,14 @@ section {
 #entete p {
   font-family: "Amiri";
   font-size: 16px;
-  max-width: 370px;
+  max-width: 350px;
   margin-top: -60px;
   text-align: center;
+}
+
+.texttest {
+  color: blue;
+  color: red;
 }
 
 .navitem {
@@ -191,7 +178,7 @@ section {
   padding: var(--nav-gap);
   position: fixed;
   right: 0;
-  top: 30%;
+  top: 21%;
   transform: translateY(50%);
 }
 .navitem .nav-item {
@@ -199,6 +186,9 @@ section {
   display: flex;
   margin-bottom: var(--nav-gap);
   flex-direction: row-reverse;
+}
+.navitem .nav-item a:hover {
+  background-color: rgb(125, 125, 125);
 }
 
 .nav-label {
@@ -222,8 +212,18 @@ section {
 }
 
 .nav-link-selected {
+  background-color: rgb(204, 202, 202);
+  transform: scale(1.1);
+}
+
+.nav-link:target + .nav-label {
+  opacity: 1;
   background-color: black;
-  transform: scale(1.4);
+}
+
+.nav-link.active {
+  background-color: black;
+  /* Ajoutez d'autres styles si nécessaire */
 }
 
 @media all and (max-device-width: 480px) {
@@ -253,14 +253,17 @@ section {
 
 #contenuportfolio {
   background-color: white;
+  padding-bottom: 60px;
+  padding-left: 20px;
 }
 #contenuportfolio img {
-  width: 450px;
+  width: 29vw;
+  height: 19vw;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 16px;
   box-shadow: 2px 2px 8px black;
-  margin: 40px 0px 10px 40px;
+  margin: 40px 0px -20px 20px;
 }
 
 #portfolio2 {
@@ -285,24 +288,112 @@ section {
 #listeappli {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row-reverse;
   gap: 20px;
   background-color: white;
-  padding: 50px;
+  padding-right: 50px;
   margin-top: -10px;
   list-style-type: none;
+  padding-bottom: 70px;
 }
 #listeappli img {
-  width: 200px;
+  width: 14vw;
   border-radius: 16px;
   box-shadow: 2px 2px 8px black;
 }
 
+@media all and (max-device-width: 1000px) {
+  #portfolio .titreportfolio {
+    font-family: "Italiana";
+    font-size: 30px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+  #portfolio .line {
+    width: 250px;
+    margin-left: 103px;
+  }
+}
 @media all and (max-device-width: 480px) {
+  #portfolio .titreportfolio {
+    font-family: "Italiana";
+    font-size: 30px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+  #portfolio .line {
+    border-top: 1px black solid;
+    width: 250px;
+    margin-left: 103px;
+  }
   #contenuportfolio img {
     width: 150px;
   }
   #listeappli img {
-    width: 90px;
+    width: 10vw;
+  }
+}
+#aproposde {
+  background-color: #ede4ff;
+  padding: 60px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: auto;
+  width: 90vw;
+  gap: 30px;
+  flex-wrap: wrap;
+  height: 90vh;
+}
+#aproposde .maphoto {
+  width: 420px;
+  height: 420px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 420px;
+  box-shadow: 2px 0px 8px black;
+  padding: 2px;
+  margin: 40px 20px 0px;
+}
+#aproposde .titreportfolio {
+  font-family: "Italiana";
+  font-size: 50px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+#aproposde .line {
+  border-top: 1px black solid;
+  width: 350px;
+  margin-left: 103px;
+  margin-bottom: 40px;
+}
+#aproposde p {
+  width: 50vw;
+  font-size: 15px;
+  margin: 8px;
+  font-family: "Nanum Gothic";
+}
+#aproposde .debutabout {
+  background-color: white;
+  padding: 8px;
+  border-radius: 20px;
+}
+#aproposde img {
+  gap: 20px;
+  height: 40px;
+  border-radius: 10px;
+  -webkit-filter: drop-shadow(2px 0px 6px black);
+  margin: 20px;
+}
+#aproposde .logos {
+  margin: auto;
+  margin-top: -20px;
+}
+
+@media all and (max-device-width: 480px) {
+  #aproposde img {
+    width: 250px;
+    height: 250px;
+  }
+  #aproposde p {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=main.css.map */

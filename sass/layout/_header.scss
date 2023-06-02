@@ -6,11 +6,11 @@ header {
     font-family: 'Nanum Gothic';
     background-color: $mylavender;
     font-size: 12px;
-    padding: 10px;
+    padding: 10px 10px 10px 20px;
     color:black;
     position: fixed;
     z-index: 1;
-    width: 98%;
+    width: 99%;
     right:0;
     top: 0;
         a {
@@ -19,6 +19,9 @@ header {
             &:hover {
                 font-weight: bold;
             }
+        }
+        .nav1, .nav2, .nav3 ::target{
+            font-weight: bold;
         }
 }
 

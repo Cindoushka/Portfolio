@@ -21,22 +21,23 @@
 
 #contenuportfolio {
     background-color: white;
+    padding-bottom: 60px;
+    padding-left: 20px;
     // margin-left: 10px;
     // margin-right: 50px;
     // z-index: 20;
         img {
-            width: 450px;
+            width: 29vw;
+            height: 19vw;
             object-fit: cover;
             border-radius: 16px;
             box-shadow: 2px 2px 8px black;
-            margin: 40px 0px 10px 40px;
+            margin: 40px 0px -20px 20px;
         }
 }
 
 #portfolio2 {
     background-color: white;
-    // margin-left: 10px;
-    // margin-right: 50px;
     padding-bottom: 40px;
     text-align: end;
     padding-top: 10px;
@@ -58,24 +59,51 @@
 #listeappli {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row-reverse;
     gap: 20px;
     background-color: white;
-    // margin-left: 10px;
-    // margin-right: 50px;
-    padding: 50px;
+    padding-right:50px;
     margin-top: -10px;
     list-style-type: none;
+    padding-bottom: 70px;
         img {
-            width: 200px;
+            width: 14vw;
             border-radius: 16px;
             box-shadow: 2px 2px 8px black;
         }
 }
 
 
+
+@media all and (max-device-width: 1000px) {
+    #portfolio {
+        .titreportfolio {
+            font-family: 'Italiana';
+            font-size: 30px;
+            margin-left: 30px;
+            margin-bottom: 10px;
+        }
+        .line {
+            width: 250px;
+            margin-left: 103px;
+        }
+    }
+}
 @media all and (max-device-width: 480px) {
     
+    #portfolio {
+            .titreportfolio {
+                font-family: 'Italiana';
+                font-size: 30px;
+                margin-left: 30px;
+                margin-bottom: 10px;
+            }
+            .line {
+                border-top: 1px black solid;
+                width: 250px;
+                margin-left: 103px;
+            }
+        }
+
    #contenuportfolio {
         img {
         width: 150px;
@@ -84,7 +112,7 @@
 
    #listeappli {
         img {
-            width: 90px;
+            width: 10vw;
         }
    }
     }
