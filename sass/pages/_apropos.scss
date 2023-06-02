@@ -1,14 +1,14 @@
 #aproposde {
     background-color: $mylavender;
-    padding: 60px;
     display: flex;
     flex-direction: row-reverse;
     margin: auto;
-    width: 90vw;
-    gap: 30px;
     flex-wrap: wrap;
     height: 90vh;
+    padding-right: 90px;
+    padding-top: 40px;
     .maphoto {
+        width: 50vw;
         width: 420px;
         height: 420px;
         object-fit: cover;
@@ -16,7 +16,10 @@
         box-shadow: 2px 0px 8px black;
         padding: 2px;
         margin: 40px 20px 0px;
-
+    }
+    .textabout {
+        width: 50vw;
+        margin: 0px;
     }
     .titreportfolio {
         font-family: 'Italiana';
@@ -30,13 +33,11 @@
         margin-left: 103px;
         margin-bottom: 40px;
     }
-    p {
-        width: 50vw;
+    .debutabout {
+        width: 40vw;
         font-size: 15px;
         margin: 8px;
         font-family: 'Nanum Gothic';
-    }
-    .debutabout{
         background-color: white;
         padding: 8px;
         border-radius: 20px;
@@ -45,13 +46,37 @@
         gap: 20px;
         height: 40px;
         border-radius: 10px;
-        -webkit-filter: drop-shadow(2px 0px 6px black);
+        -webkit-filter: drop-shadow(2px 2px 6px gray);
         margin: 20px;
     }
     .logos {
         margin: auto;
         margin-top: -20px;
     }
+    .soustitreabout {
+        font-weight: bold;
+        overflow: hidden; /* Permet de cacher le texte qui dépasse */
+        border-right: 0.1em solid #000; /* Ajoute un trait clignotant pour simuler la machine à écrire */
+        white-space: nowrap; /* Empêche le texte de passer à la ligne */
+        margin: 0 auto; /* Centre le texte horizontalement */
+        letter-spacing: 0.1em; /* Ajoute un espacement entre les caractères */
+        animation: typing 5s steps(40) infinite;
+    }
+    p {
+        font-family: 'Nanum Gothic';
+        padding: 10px;
+        margin: auto;
+        width: 40vw;
+        padding-right: 100px;
+            .bold {
+                font-weight: bold;
+            }
+    }
+}
+
+@keyframes typing {
+  from { width: 0; } /* Débute avec une largeur de 0 */
+  to { width: 100%; } /* Augmente la largeur jusqu'à 100% */
 }
 
 @media all and (max-device-width: 480px) {

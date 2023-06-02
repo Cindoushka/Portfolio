@@ -1,0 +1,66 @@
+#contacts {
+    padding-bottom: 60px;
+    background-color: $mylavender;
+    h2 {
+        font-family: 'Italiana';
+        font-size: 50px;
+        margin-left: 90px;
+        margin-bottom: 10px;
+    }
+    .line {
+        border-top: 1px black solid;
+        width: 350px;
+        margin-left: 163px;
+    }
+    .debutabout {
+        width: 40vw;
+        font-size: 15px;
+        margin: 40px auto;
+        font-family: 'Nanum Gothic';
+        background-color: white;
+        padding: 8px;
+        border-radius: 20px;
+        .soustitreabout {
+            margin: auto;
+            font-weight: bold;
+            overflow: hidden; /* Permet de cacher le texte qui dépasse */
+            // border-right: 0.1em solid #000; /* Ajoute un trait clignotant pour simuler la machine à écrire */
+            white-space: nowrap; /* Empêche le texte de passer à la ligne */
+            margin: 0 auto; /* Centre le texte horizontalement */
+            letter-spacing: 0.1em; /* Ajoute un espacement entre les caractères */
+            animation: defiling 2s steps(400) infinite;
+        }
+    }
+    .contact1 {
+        display: flex;
+        background-color: white;
+        opacity: 0.9;
+        width: 60vw;
+        justify-content: space-around;
+        margin: 20px auto;
+        padding: 20px;
+        align-items: center;
+        box-shadow: 2px 2px 20px rgba(185, 185, 185, 0.546);
+        text-decoration: none;
+            img {
+                width: 40px;
+            }
+            p{
+                font-family: 'Nanum Gothic';
+                text-align: center;
+                color: black;
+                width: 80px;
+            }
+            .barre {
+                border-top: 1px gray solid;
+                opacity: 0.2;
+                width: 30px;
+                transform: rotate(90deg)   
+             }
+    }
+}
+
+@keyframes defiling {
+    from { width: 0; } /* Débute avec une largeur de 0 */
+    to { width: 58%; } /* Augmente la largeur jusqu'à 100% */
+  }

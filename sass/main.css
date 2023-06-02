@@ -334,16 +334,16 @@ section {
 }
 #aproposde {
   background-color: #ede4ff;
-  padding: 60px;
   display: flex;
   flex-direction: row-reverse;
   margin: auto;
-  width: 90vw;
-  gap: 30px;
   flex-wrap: wrap;
   height: 90vh;
+  padding-right: 90px;
+  padding-top: 40px;
 }
 #aproposde .maphoto {
+  width: 50vw;
   width: 420px;
   height: 420px;
   -o-object-fit: cover;
@@ -352,6 +352,10 @@ section {
   box-shadow: 2px 0px 8px black;
   padding: 2px;
   margin: 40px 20px 0px;
+}
+#aproposde .textabout {
+  width: 50vw;
+  margin: 0px;
 }
 #aproposde .titreportfolio {
   font-family: "Italiana";
@@ -365,13 +369,11 @@ section {
   margin-left: 103px;
   margin-bottom: 40px;
 }
-#aproposde p {
-  width: 50vw;
+#aproposde .debutabout {
+  width: 40vw;
   font-size: 15px;
   margin: 8px;
   font-family: "Nanum Gothic";
-}
-#aproposde .debutabout {
   background-color: white;
   padding: 8px;
   border-radius: 20px;
@@ -380,14 +382,41 @@ section {
   gap: 20px;
   height: 40px;
   border-radius: 10px;
-  -webkit-filter: drop-shadow(2px 0px 6px black);
+  -webkit-filter: drop-shadow(2px 2px 6px gray);
   margin: 20px;
 }
 #aproposde .logos {
   margin: auto;
   margin-top: -20px;
 }
+#aproposde .soustitreabout {
+  font-weight: bold;
+  overflow: hidden; /* Permet de cacher le texte qui dépasse */
+  border-right: 0.1em solid #000; /* Ajoute un trait clignotant pour simuler la machine à écrire */
+  white-space: nowrap; /* Empêche le texte de passer à la ligne */
+  margin: 0 auto; /* Centre le texte horizontalement */
+  letter-spacing: 0.1em; /* Ajoute un espacement entre les caractères */
+  animation: typing 5s steps(40) infinite;
+}
+#aproposde p {
+  font-family: "Nanum Gothic";
+  padding: 10px;
+  margin: auto;
+  width: 40vw;
+  padding-right: 100px;
+}
+#aproposde p .bold {
+  font-weight: bold;
+}
 
+@keyframes typing {
+  from {
+    width: 0;
+  } /* Débute avec une largeur de 0 */
+  to {
+    width: 100%;
+  } /* Augmente la largeur jusqu'à 100% */
+}
 @media all and (max-device-width: 480px) {
   #aproposde img {
     width: 250px;
@@ -396,4 +425,73 @@ section {
   #aproposde p {
     font-size: 12px;
   }
+}
+#contacts {
+  padding-bottom: 60px;
+  background-color: #ede4ff;
+}
+#contacts h2 {
+  font-family: "Italiana";
+  font-size: 50px;
+  margin-left: 90px;
+  margin-bottom: 10px;
+}
+#contacts .line {
+  border-top: 1px black solid;
+  width: 350px;
+  margin-left: 163px;
+}
+#contacts .debutabout {
+  width: 40vw;
+  font-size: 15px;
+  margin: 40px auto;
+  font-family: "Nanum Gothic";
+  background-color: white;
+  padding: 8px;
+  border-radius: 20px;
+}
+#contacts .debutabout .soustitreabout {
+  margin: auto;
+  font-weight: bold;
+  overflow: hidden; /* Permet de cacher le texte qui dépasse */
+  white-space: nowrap; /* Empêche le texte de passer à la ligne */
+  margin: 0 auto; /* Centre le texte horizontalement */
+  letter-spacing: 0.1em; /* Ajoute un espacement entre les caractères */
+  animation: defiling 2s steps(400) infinite;
+}
+#contacts .contact1 {
+  display: flex;
+  background-color: white;
+  opacity: 0.9;
+  width: 60vw;
+  justify-content: space-around;
+  margin: 20px auto;
+  padding: 20px;
+  align-items: center;
+  box-shadow: 2px 2px 20px rgba(185, 185, 185, 0.546);
+  text-decoration: none;
+}
+#contacts .contact1 img {
+  width: 40px;
+}
+#contacts .contact1 p {
+  font-family: "Nanum Gothic";
+  text-align: center;
+  color: black;
+  width: 80px;
+}
+#contacts .contact1 .barre {
+  border-top: 1px gray solid;
+  opacity: 0.2;
+  width: 30px;
+  transform: rotate(90deg);
+}
+
+@keyframes defiling {
+  from {
+    width: 0;
+  } /* Débute avec une largeur de 0 */
+  to {
+    width: 58%;
+  } /* Augmente la largeur jusqu'à 100% */
 }/*# sourceMappingURL=main.css.map */
