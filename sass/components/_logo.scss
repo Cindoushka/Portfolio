@@ -5,7 +5,7 @@
         padding-left: 10px;
     }
 
-    .rotate-vert-center {
+    .rotate-vert-center:hover {
         -webkit-animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
                 animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
     }

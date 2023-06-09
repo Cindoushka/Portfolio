@@ -39,8 +39,26 @@
   padding-left: 10px;
 }
 
-.rotate-vert-center {
+.rotate-vert-center:hover {
   animation: rotate-vert-center 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+#boutons img {
+  width: 40px;
+  -webkit-filter: drop-shadow(2px 2px 8px white);
+}
+#boutons .contact1 {
+  position: fixed;
+  bottom: 30px;
+  right: 70px;
+}
+#boutons .contact2 {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+}
+#boutons a:hover img {
+  width: 50px;
 }
 
 body {
@@ -127,17 +145,20 @@ footer a:hover {
   justify-content: space-between;
   align-items: center;
 }
-#contenufooter .fleche {
-  border: 1px black solid;
-  padding: 1px 10px 1px 10px;
-  border-radius: 16px;
-  margin-left: 4px;
-  font-size: 12px;
+#contenufooter #navfooter {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 #navfooter {
   display: flex;
   gap: 20px;
+}
+#navfooter #leftbotnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 section {
@@ -178,7 +199,7 @@ section {
   padding: var(--nav-gap);
   position: fixed;
   right: 0;
-  top: 21%;
+  top: 25%;
   transform: translateY(50%);
 }
 .navitem .nav-item {

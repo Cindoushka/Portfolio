@@ -22,17 +22,20 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-        .fleche {
-            border: 1px black solid;
-            padding: 1px 10px 1px 10px;
-            border-radius: 16px;
-            margin-left: 4px;
-            font-size: 12px;
-        }
+        #navfooter {
+            display:flex;
+            gap: 20px;
+            align-items: center;
+    }
 }
+        #navfooter {
+            display:flex;
+            gap: 20px;
+            #leftbotnav {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }    
 
-#navfooter {
-    display:flex;
-    gap: 20px;
-}
 

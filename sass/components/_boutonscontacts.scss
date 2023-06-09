@@ -1,0 +1,21 @@
+#boutons {
+    img {
+        width: 40px;
+        -webkit-filter: drop-shadow(2px 2px 8px white);
+    }
+    .contact1 { 
+       position: fixed;
+        bottom: 30px;
+        right: 70px;
+    }
+    .contact2 {
+        position: fixed;
+        bottom: 60px;
+        right: 20px;
+    }
+    a:hover {
+        img {
+            width: 50px;
+        }
+    }
+}
