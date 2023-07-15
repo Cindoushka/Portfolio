@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Cindoushka/Curriculum-Vitae-version-web/issues"
   },
-  "homepage": "https://github.com/Cindoushka/Curriculum-Vitae-version-web#readme"
+  "homepage": "https://github.com/Cindoushka/Curriculum-Vitae-version-web#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  }
 }

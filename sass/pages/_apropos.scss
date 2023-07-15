@@ -48,12 +48,16 @@
         border-radius: 10px;
         -webkit-filter: drop-shadow(2px 2px 6px gray);
         margin: 20px;
+        &:hover {
+            transform: rotate(350deg);
+        }
     }
     .logos {
         margin: auto;
         margin-top: -20px;
     }
     .soustitreabout {
+        font-family: 'Nanum Gothic';
         font-weight: bold;
         overflow: hidden; /* Permet de cacher le texte qui dépasse */
         border-right: 0.1em solid #000; /* Ajoute un trait clignotant pour simuler la machine à écrire */

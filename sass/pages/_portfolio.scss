@@ -33,7 +33,11 @@
             border-radius: 16px;
             box-shadow: 2px 2px 8px black;
             margin: 40px 0px -20px 20px;
+            &:hover{
+                filter: blur(2px) brightness(95%);
+            }
         }
+
 }
 
 #portfolio2 {
@@ -69,7 +73,11 @@
             width: 14vw;
             border-radius: 16px;
             box-shadow: 2px 2px 8px black;
+            &:hover{
+                filter: blur(2px) brightness(95%);
+            }
         }
+
 }
 
 
