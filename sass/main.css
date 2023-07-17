@@ -37,6 +37,7 @@
   float: left;
   margin: 0px 10px 0px 0px;
   padding-left: 10px;
+  transition: all 0.2s ease-in-out;
 }
 
 .rotate-vert-center:hover {
@@ -46,6 +47,7 @@
 #boutons img {
   width: 40px;
   -webkit-filter: drop-shadow(2px 2px 8px white);
+  transition: all 0.2s ease-in-out;
 }
 #boutons .contact1 {
   position: fixed;
@@ -257,37 +259,66 @@ section {
 }
 #portfolio {
   background-color: white;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
   padding-top: 60px;
 }
 #portfolio .titreportfolio {
   font-family: "Italiana";
   font-size: 50px;
-  margin-left: 30px;
+  margin-left: 100px;
   margin-bottom: 10px;
 }
 #portfolio .line {
   border-top: 1px black solid;
   width: 350px;
-  margin-left: 103px;
+  margin-left: 160px;
 }
 
 #contenuportfolio {
   background-color: white;
-  padding-bottom: 60px;
-  padding-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  text-align: center;
+  padding: 0 100px 100px 100px;
 }
-#contenuportfolio img {
-  width: 29vw;
-  height: 19vw;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 2px 2px 8px black;
-  margin: 40px 0px -20px 20px;
+#contenuportfolio .conteneursite {
+  display: flex;
+  width: 25vw;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 2px 2px 8px rgb(208, 208, 208);
+  text-align: center;
 }
-#contenuportfolio img:hover {
+#contenuportfolio .conteneursite::after {
+  display: flex;
+  content: attr(title);
+  position: absolute;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  inset: 0;
+  font-size: 3.3rem;
+  font-family: "Italiana";
+  text-align: center;
+  pointer-events: none;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+#contenuportfolio .conteneursite:hover::after {
+  opacity: 1;
+}
+#contenuportfolio .conteneursite img {
+  -o-object-fit: content;
+     object-fit: content;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+#contenuportfolio .conteneursite img:hover {
   filter: blur(2px) brightness(95%);
+  transform: scale(1.07);
 }
 
 #portfolio2 {
@@ -302,30 +333,60 @@ section {
   font-size: 50px;
   margin-right: 50px;
   margin-bottom: 10px;
+  padding-right: 100px;
 }
 #portfolio2 .line {
   border-top: 1px black solid;
   width: 350px;
-  margin-left: 68%;
+  margin-left: 55%;
+  padding-bottom: 40px;
 }
 
 #listeappli {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 24px;
   background-color: white;
-  padding-right: 50px;
+  padding: 0 100px 100px 100px;
   margin-top: -10px;
   list-style-type: none;
-  padding-bottom: 70px;
 }
-#listeappli img {
-  width: 14vw;
+#listeappli .conteneurappli {
+  display: flex;
+  width: 120px;
+  position: relative;
   border-radius: 16px;
-  box-shadow: 2px 2px 8px black;
+  overflow: hidden;
+  box-shadow: 2px 2px 4px gray;
+  border: 4px solid black;
 }
-#listeappli img:hover {
+#listeappli .conteneurappli::after {
+  display: flex;
+  content: attr(title);
+  position: absolute;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  inset: 0;
+  font-size: 2rem;
+  font-family: "Italiana";
+  text-align: center;
+  pointer-events: none;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+#listeappli .conteneurappli:hover::after {
+  opacity: 1;
+}
+#listeappli .conteneurappli img {
+  border-radius: 12px;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+#listeappli .conteneurappli img:hover {
   filter: blur(2px) brightness(95%);
+  transform: scale(1.07);
 }
 
 @media all and (max-device-width: 1000px) {
@@ -376,13 +437,14 @@ section {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 420px;
-  box-shadow: 2px 0px 8px black;
+  box-shadow: 2px 0px 6px gray;
   padding: 2px;
   margin: 40px 20px 0px;
 }
 #aproposde .textabout {
   width: 50vw;
   margin: 0px;
+  line-height: 24px;
 }
 #aproposde .titreportfolio {
   font-family: "Italiana";
@@ -409,11 +471,8 @@ section {
   gap: 20px;
   height: 40px;
   border-radius: 10px;
-  -webkit-filter: drop-shadow(2px 2px 6px gray);
+  -webkit-filter: drop-shadow(2px 2px 4px gray);
   margin: 20px;
-}
-#aproposde img:hover {
-  transform: rotate(350deg);
 }
 #aproposde .logos {
   margin: auto;
@@ -426,14 +485,14 @@ section {
   border-right: 0.1em solid #000; /* Ajoute un trait clignotant pour simuler la machine à écrire */
   white-space: nowrap; /* Empêche le texte de passer à la ligne */
   margin: 0 auto; /* Centre le texte horizontalement */
-  letter-spacing: 0.1em; /* Ajoute un espacement entre les caractères */
+  letter-spacing: 0.13em; /* Ajoute un espacement entre les caractères */
   animation: typing 5s steps(40) infinite;
 }
 #aproposde p {
   font-family: "Nanum Gothic";
   padding: 10px;
   margin: auto;
-  width: 40vw;
+  width: 45vw;
   padding-right: 100px;
 }
 #aproposde p .bold {
