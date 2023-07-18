@@ -70,6 +70,7 @@
         margin: auto;
         width: 45vw;
         padding-right: 100px;
+        background-color: $mylavender;
             .bold {
                 font-weight: bold;
             }
@@ -85,8 +86,22 @@
 
     #aproposde {
         img {
-            width: 250px;
-            height: 250px;
+            width: 150px;
+            height: 150px;
+        }
+        p { 
+            font-size: 12px;
+        }
+    }
+
+}
+
+@media all and (max-device-width: 700px) {
+
+    #aproposde {
+        img {
+            width: 200px;
+            height: 200px;
         }
         p { 
             font-size: 12px;

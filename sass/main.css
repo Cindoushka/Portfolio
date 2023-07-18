@@ -167,6 +167,102 @@ section {
   height: 100vh;
 }
 
+.slider-container {
+  max-width: 80%;
+  position: relative;
+  margin: auto;
+  height: 240px;
+  overflow: hidden;
+  display: flex;
+  padding-top: 30px;
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+.menu label {
+  cursor: pointer;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50px;
+  margin: 0 0.2em 1em;
+}
+
+.menu label:hover, .menu label:focus {
+  background: #ede4ff;
+}
+
+.slide-input {
+  opacity: 0;
+}
+
+.slide-img {
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 10;
+  transition: left 0s 0.75s;
+}
+
+[id^=slide]:checked + .slide-img {
+  left: 0;
+  z-index: 100;
+  transition: 0.65s left ease-out;
+}
+
+.pagediapo {
+  display: flex;
+  gap: 40px;
+}
+.pagediapo .conteneursite {
+  display: flex;
+  width: 24vw;
+  height: 190px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 2px 2px 8px rgb(208, 208, 208);
+  text-align: center;
+}
+.pagediapo .conteneursite::after {
+  display: flex;
+  content: attr(title);
+  position: absolute;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  inset: 0;
+  font-size: 3.3rem;
+  font-family: "Italiana";
+  text-align: center;
+  pointer-events: none;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.pagediapo .conteneursite:hover::after {
+  opacity: 1;
+}
+.pagediapo .conteneursite img {
+  -o-object-fit: content;
+     object-fit: content;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+.pagediapo .conteneursite img:hover {
+  filter: blur(2px) brightness(95%);
+  transform: scale(1.07);
+}
+
 #entete {
   display: flex;
   flex-direction: column;
@@ -336,9 +432,10 @@ section {
   padding-right: 100px;
 }
 #portfolio2 .line {
+  align-items: end;
   border-top: 1px black solid;
   width: 350px;
-  margin-left: 55%;
+  margin-left: 57%;
   padding-bottom: 40px;
 }
 
@@ -494,6 +591,7 @@ section {
   margin: auto;
   width: 45vw;
   padding-right: 100px;
+  background-color: #ede4ff;
 }
 #aproposde p .bold {
   font-weight: bold;
@@ -509,8 +607,17 @@ section {
 }
 @media all and (max-device-width: 480px) {
   #aproposde img {
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
+  }
+  #aproposde p {
+    font-size: 12px;
+  }
+}
+@media all and (max-device-width: 700px) {
+  #aproposde img {
+    width: 200px;
+    height: 200px;
   }
   #aproposde p {
     font-size: 12px;
